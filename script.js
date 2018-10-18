@@ -9,19 +9,29 @@ const resetButton = document.querySelector('.resetButton');
 // const resetButton1 = document.querySelector('.1resetButton');
 
 const score = document.querySelector('.score');
-const container = [false, false, false, false, false, false, false, false, false,
-  false, false, false, false, false, false, false, false, false, false, false,
-  false, false, false, false, false, false, false, false, false, false, false,
-  false, false, false, false, false, false, false, false, false, false, false, false, false, false,
-  false, false, false, false, false, false, false, false, false, false, false,
-  false, false, false, false, false, false, false, false, false, false, false,
-  false, false, false, false, false, false, false, false, false, false, false, false, false, false,
-  false, false, false, false, false, false, false, false, false, false, false,
-  false, false, false, false, false, false, false, false, false, false, false,
-  false, false, false, false, false, false, false, false, false, false, false,
-  false, false, false, false, false, false];
+const container = [];
+for (let i = 0; i < 143; i++) {
+  container.push(false);
+}
 
-
+let squareId = 1;
+const containerDiv = document.querySelector('.container');
+for (let row = 0; row < 12; row++) {
+  const rowDiv = document.createElement('div');
+  rowDiv.classList = 'row column is-1 columns';
+  for (let square = 0; square < 12; square++) {
+    const squareDiv = document.createElement('div');
+    squareDiv.classList = 'squares column is-1';
+    if (squareId === 144) {
+      squareDiv.id = 'startingSquare';
+    } else {
+      squareDiv.id = squareId;
+    }
+    squareId++;
+    rowDiv.appendChild(squareDiv);
+  }
+  containerDiv.appendChild(rowDiv);
+}
 
 
 //^108 squares
