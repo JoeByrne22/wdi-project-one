@@ -255,7 +255,7 @@ h3 {
       font-size:45px;
       font-weight: bold;
       position: absolute;
-      -webkit-animation:colorchange 20s infinite alternate;
+      -webkit-animation:colorchange 1s infinite alternate;
 
 
     }

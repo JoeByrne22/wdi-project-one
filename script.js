@@ -124,7 +124,7 @@ squares[squares.length - 1].addEventListener('click', timerStart);
 function NoHighlightedSquaresLeft() {
 
   if (container.filter(square => square).length === container.length) {
-  // if (container.filter(square => square).length >= 30) {
+  // if (container.filter(square => square).length > 142) {
     console.log('Well done, You have completed the level. You\'re timer was', `${i}`);
     const welldone = document.getElementById('wellDone');
     welldone.play();
