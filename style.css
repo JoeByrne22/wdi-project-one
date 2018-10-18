@@ -1,37 +1,317 @@
-.container {
-  display: flex;
-  flex-wrap: wrap;
-  width:90%;
-  height:150px;
-  margin:40px;
+body {
+  background-color: black;
 }
 
-span {
+.middlePage {
+  background-color: black;
+  z-index: 0;
+}
+
+.middlePage,.gameOverPage,.lastPage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  /* flex-wrap: wrap;
+  width:90%;
+  height:6%;
+  margin:40px; */
+  z-index: 1;
+  width:88%;
+  margin-left: 120px;
+  margin-top: 70px;
+}
+
+.row1, .row2, .row3, .row4, .row5, .row6, .row7, .row8, .row9, .row10, .row11, .row12 {
+  display: flex;
+  justify-content: center;
+  width: 90%;
+  flex-direction: rows;
+  /* flex-direction: rows; */
+  /* flex-wrap: wrap; */
+  border: solid 1px white;
+}
+
+.squares {
+  /* border-left: solid 1px white; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   border: solid 1px black;
+  width: 98%;
+  height: 5vh;
+}
+
+
+
+
+
+#start {
+  height: 90px;
+  width: 180px;
+  background-color: #7bea5d;
+  font-size: 20px;
+  margin: 5px;
+
+
+  /* margin-bottom: 30px; */
+}
+
+#timer {
+  height: 90px;
+  width: 180px;
+  margin-left: 445px;
+  margin-top: 5px;
+  background-color: black;
+  color: red;
+  font-size: 40px;
+
+/* margin-top: 5px; */
+  /* margin-right: 150px; */
+
+}
+
+#startingSquare {
+  background-image: url(http://www.zingerbug.com/Backgrounds/background_images/black_and_white_checkers.gif);
+}
+
+
+span {
+  /* border: solid 1px black;
   display: flex;
   width: 100%;
-  height: 100%;
+  height: 100%; */
+  z-index: 1
 }
 
 div {
-  border: solid 1px black;
+  /* border: solid 1px black;
   display: flex;
-  width: 100%;
-  height: 100%;
+  width: 90%;
+  height: 100%; */
+  z-index: 1;
 }
 
 .highlightedSquares {
   background-color: lightblue;
+  z-index: 1;
 }
 
 button {
-  text-align: center;
+  /* text-align: center;
   float: right;
   height: 100px;
   width:100px;
   margin-right: 10px;
+  z-index: 1;
+  background-color: red; */
+  /* padding-top: 40px; */
+  /* margin-top: 5px; */
+}
+
+.buttons {
+  /* padding-top: 2200px; */
+  /* margin-right: 1000px; */
 }
 
 .redSquares {
   background-color: red;
+  margin-top: 0.75px;
+  margin-left: 1.5px;
+  height: 31px;
+  width: 95.5%;
+  /* text-align: center;
+  vertical-align: center;
+  height: 88%;
+  margin-left: 10px;
+  width: 88%; */
+  z-index: 1;
 }
+
+.timer {
+  /* text-align: center;
+  float: right;
+  height: 100px;
+  width:200px;
+  margin-right: 10px;
+  font-size: 100px;
+  color: black; */
+  z-index: 1;
+}
+
+.lastPage {
+  z-index: -4;
+  background-color: green;
+height: 100%;
+  background-image: url(https://3c1703fe8d.site.internapcdn.net/newman/gfx/news/hires/2017/chemistexpla.jpg);
+}
+
+h1 {
+  font-size: 20px;
+  text-align: center;
+  margin: 50px;
+  padding: 0;
+  color: white;
+  top: 4px;
+}
+
+.congrats {
+  padding-top: 60px;
+  font-size: 30px;
+  text-align: center;
+  color: #8bafd4;
+  text-align: center;
+  animation: pulse 5s infinite;
+  margin-bottom: 50px;
+}
+
+@keyframes pulse {
+  0% {
+    font-size: 30px;
+  }
+  50% {
+    font-size: 50px;
+  }
+  100%{
+    font-size: 30px;
+  }
+}
+
+}
+
+h3 {
+  font-size: 30px;
+  text-align: center;
+  color: white;
+}
+
+.loser {
+  font-size: 30px;
+  text-align: center;
+  color: white;
+}
+.score {
+  font-size: 100px;
+  height: 150px;
+  width: 150px;
+  text-align: center;
+  color: white;
+  margin-left: 560px;
+  animation-name: rotate;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+  }
+
+  @keyframes rotate {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+
+.gameOverPage {
+  z-index: -5;
+  background-color: grey;
+  background-image: url(http://intheloose.com/wp-content/uploads/2013/07/fans-booing.jpg);
+}
+
+.resetButton {
+  height: 150px;
+  width:150px;
+  text-align: center;
+  margin-left: 550px;
+  font-size: 20px;
+  background-color: red;
+}
+
+
+    .center {
+
+      margin-top: 0;
+
+    }
+
+    .awesome {
+
+      font-family: futura;
+      font-style: italic;
+
+      width:100%;
+
+      margin: 0 auto;
+      text-align: center;
+
+      color:#313131;
+      font-size:45px;
+      font-weight: bold;
+      position: absolute;
+      -webkit-animation:colorchange 20s infinite alternate;
+
+
+    }
+
+    @-webkit-keyframes colorchange {
+      0% {
+
+        color: blue;
+      }
+
+      10% {
+
+        color: #8e44ad;
+      }
+
+      20% {
+
+        color: #1abc9c;
+      }
+
+      30% {
+
+        color: #d35400;
+      }
+
+      40% {
+
+        color: blue;
+      }
+
+      50% {
+
+        color: #34495e;
+      }
+
+      60% {
+
+        color: blue;
+      }
+
+      70% {
+
+        color: #2980b9;
+      }
+      80% {
+
+        color: #f1c40f;
+      }
+
+      90% {
+
+        color: #2980b9;
+      }
+
+      100% {
+
+        color: pink;
+      }
+    }
