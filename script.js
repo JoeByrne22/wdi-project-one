@@ -49,7 +49,7 @@ function handleHover(event) {
   NoHighlightedSquaresLeft();
 }
 
-//function randomly generates am array, with 12 random numbers
+//function randomly generates an array, with 12 random numbers
 function startButtonClick() {
   const randomNumber = Math.floor(Math.random()*119);
   squares[randomNumber].classList.add('redSquares');
