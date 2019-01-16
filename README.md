@@ -36,62 +36,73 @@ If all the squares get highlighted including the the winning page.
 
 ## My Winning Logic
 
-`function NoHighlightedSquaresLeft() {`
+![Selecting Difficulty gif](screenshot/Winning.gif)
+```
 
-`if (container.filter(square => square).length === container.length) {`
+function NoHighlightedSquaresLeft() {
 
-`if (container.filter(square => square).length > 142) {`
+if (container.filter(square => square).length === container.length) {
 
-`const welldone = document.getElementById('wellDone');
+if (container.filter(square => square).length > 142) {
+
+const welldone = document.getElementById('wellDone');
 welldone.play();
 lastPage.style.zIndex = '3';
-score.textContent = (`${i}`)``
+score.textContent = (`${i}`)
 
-`;}}`
+;}}
+
+```
 
 
 # My Process
 
-  1.) <strong>Make the grid</strong> using Bulma.
+  1.) <strong>Make the grid</strong> using Bulma.  
+
+  ADD WIREFRAMES
 
   2.) DOM elements with a hover over function, to make all the squares change colour (and class) when they were hovered over by the mouse. To do this, I created a function called handleHover:
 
-  `function handleHover(event) {`
+```
+  function handleHover(event) {
 
-  `container[event.target.id -1] = true;`
+  container[event.target.id -1] = true;
 
-  `event.target.classList.add('highlightedSquares');`
+  event.target.classList.add('highlightedSquares');
+```
 
-  Changing the class of the hovered over div to highlightedSquares.
+  // Changing the class of the hovered over div to highlightedSquares.
 
-  `NoHighlightedSquaresLeft();`
+```  NoHighlightedSquaresLeft(); ```
 
-  After the square has changed class, I invoked the winning logic to check if all the squares
+  // After the square has changed class, I invoked the winning logic to check if all the squares
       have been highlighted.
 
   `}`
 
   3.) Add a <strong>timer</strong>.
 
-  `function timerStart() {`
+  ```
+  function timerStart() {
+  const interval = setInterval(function () {
+  i = i + 1;
+  const themeTune = document.getElementById('themeTune');
 
-  `const interval = setInterval(function () {`
-
-  `i = i + 1;`
-
-  `const themeTune = document.getElementById('themeTune');`
-
-  `themeTune.play();`
+  themeTune.play();
     When the timerStart function is invoked the background themeTune plays.
 
-  `timerFace.textContent = `${i}`;`
-    The timer face shows i, I have set the timer to change this value every second, therefore building a timer which counts up in seconds.
+  timerFace.textContent = `${i}`;
 
-  `}, 100);`
+    // The timer face shows i, I have set the timer to change this value every second, therefore building a timer which counts up in seconds.
 
-  `}`
+  }, 100);
+  }
+
+  ```
 
   4.) I was running out of time and still had more things that I wanted to add, so I decided to dedicate my time to making a <strong>selecting difficulty button</strong>.
+
+  ![Selecting Difficulty gif](screenshot/SelectingDifficulty.gif)
 
   The concept behind the difficulty button was simple, using DOM elements when the start button was pressed the startButtonClick was invoked. This function randomly generates 12 random numbers in an array between 0 - 119. Then gives the the numbers that corresponding  to the squares a new class of redSquares.
 
@@ -100,8 +111,20 @@ score.textContent = (`${i}`)``
 
 # If I Had Time...
 
-  1.) Make the difficulty selector smoother, at the moment a red square can be generated multiple times is the same div.
+  1.) Add more style, I would love the theme of the game to be universal throughout, for me its still looks a bit slapped together.
 
-  2.) Add more style, I would love the theme of the game to be universal throughout, for me its still looks a bit slapped together.
+  2.) Add a scoreboard, I would need figure out how to save and show the data on local storage. The reason why I would do it this way is because I would need the information to be save even when the page is reloaded.
 
-  3.) Add a scoreboard, I would need figure out how to save and show the data on local storage. The reason why I would do it this way is because I would need the information to be save even when the page is reloaded.
+# Bugs
+
+  1.) When selecting the difficulty, the boxes are randomly generated, so sometimes they overlap. So I need to make it so that when a box is classed as red, it can't be classed again.
+
+  2.) The bottom two rows never have red squares, initially I thought this was bad but now I think its better, because the starting point is never surrounded with red squares.
+
+  3.) If you tap the 'SelectingDifficulty' button over and over, you reach a point where all the boxes are selected, making the game quick and easy to complete.
+
+  ![Selecting Difficulty gif](screenshot/QuickWinning.gif)
+
+# Wins
+
+  Overall my main win, was getting more of a grasp of JS, I was allowed to spread my wings a little and try new things, for example audio. This was my first time using audio and I really enjoyed it. I had a theme song when the game started, a cheer when you won and booing when you lost.
