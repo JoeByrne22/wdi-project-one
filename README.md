@@ -2,7 +2,7 @@
 
 ## Isn't this Amazing
 
-link to [My game](file:///Users/joebyrne/development/wdi-project-one/index.html)
+[My game](file:///Users/joebyrne/development/wdi-project-one/index.html)
 
 'Isn't this amazing' is a speed and skill based game, with the user attempting to fill the board without touch the red squares. Then you get a score, the lower the score the better. It's fun, competitive and intense.
 
@@ -109,9 +109,9 @@ score.textContent = (`${i}`)
   Each time the button is pressed, more red squares are generated.
 
 
-# If I Had Time...
+# If I had Time...
 
-  1.) Add more style, I would love the theme of the game to be universal throughout, for me its still looks a bit slapped together.
+  1.) Add more style, I would love the theme of the game to be universal throughout, for me it's still looks a bit slapped together.
 
   2.) Add a scoreboard, I would need figure out how to save and show the data on local storage. The reason why I would do it this way is because I would need the information to be save even when the page is reloaded.
 
