@@ -37,6 +37,7 @@ If all the squares get highlighted including the the winning page.
 ## My Winning Logic
 
 ![Selecting Difficulty gif](screenshot/Winning.gif)
+
 ```
 
 function NoHighlightedSquaresLeft() {
