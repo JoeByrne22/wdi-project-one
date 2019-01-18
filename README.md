@@ -2,7 +2,7 @@
 
 ## Isn't this Amazing
 
-link to [My game] [file:///Users/joebyrne/development/wdi-project-one/index.html]
+link to [My game](file:///Users/joebyrne/development/wdi-project-one/index.html)
 
 'Isn't this amazing' is a speed and skill based game, with the user attempting to fill the board without touch the red squares. Then you get a score, the lower the score the better. It's fun, competitive and intense.
 
